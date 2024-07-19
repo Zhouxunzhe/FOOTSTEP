@@ -1,2 +1,2 @@
-# TAMP
-TAMP: Task Agent Memorizing Planning
+# FOOTSTEP
+FOOTSTEP: FOundational mOdels for long-Term Scene-orienTed Embodied Planning
