@@ -1,0 +1,17 @@
+prompt = """[INST] <image>
+scene graph: 
+[cd is left to strongbox,
+cd is down to strongbox,
+cd is down to lamp,
+strongbox is right to cd,
+strongbox is up to cd,
+strongbox is right to lamp,
+strongbox is up to lamp,
+lamp is up to cd,
+lamp is left to strongbox,
+lamp is down to strongbox]
+Accoring to the scene graph and image input, please generate a task_list with functions as the action sequence.
+You can use functions: (pickup, object), (goto, object), (put, object1, object2), (open, object), (close, object).
+Here is your overall task:
+You should go to pick up cd and place it on strongbox.
+[/INST]"""

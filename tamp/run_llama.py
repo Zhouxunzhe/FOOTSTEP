@@ -38,9 +38,6 @@ Here is your overall task: {overall_task}
 Anction plan:
 [(goto, lamp), (open, lamp), (pickup, cd), (goto, strongbox), (put, cd, strongbox)]
 """},
-
-# Real scene output:
-# [lamp: turnon, cd: on the desk].
 ]
 
 prompt = pipeline.tokenizer.apply_chat_template(

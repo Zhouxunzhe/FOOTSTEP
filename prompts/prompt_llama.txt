@@ -1,0 +1,24 @@
+overall_task = "You should pick cd and place it on strongbox."
+scene_graph = """[cd is left to strongbox,
+cd is down to strongbox,
+cd is down to lamp,
+strongbox is right to cd,
+strongbox is up to cd,
+strongbox is right to lamp,
+strongbox is up to lamp,
+lamp is up to cd,
+lamp is left to strongbox,
+lamp is down to strongbox]"""
+
+messages = [
+    {"role": "system", "content": f"""You are a server chatbot who will correct my action plan and REPLAN from the given task, scene graph, and the real scene output. You only need to output the replaned action and remember, the action plan are not executed yet!"""},
+    {"role": "user", "content": f"""
+scene graph:{scene_graph}.
+current scene:
+[lamp: closed, cd: on the desk, strongbox: closed]
+You can use function: (pickup, object), (goto, object), (put, object1, object2), (open, object), (close, object).
+Here is your overall task: {overall_task}
+Anction plan:
+[(goto, lamp), (open, lamp), (pickup, cd), (goto, strongbox), (put, cd, strongbox)]
+"""},
+]
